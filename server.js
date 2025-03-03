@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
-const { keycloak, memoryStore } = require("./keycloak-config");
 const session = require("express-session");
 require("dotenv").config();
 const bodyParser = require("body-parser");
@@ -36,7 +35,6 @@ app.use(
     secret: process.env.SESSION_SECRET || "some-secret-key",
     resave: false,
     saveUninitialized: true,
-    store: memoryStore,
   })
 );
 
