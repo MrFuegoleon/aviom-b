@@ -22,7 +22,7 @@ const summaryRoute = require("./routes/summary.js");
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["http://localhost:5173","https://unique-sopapillas-d727ea.netlify.app"],
     credentials: true,
   })
 );
